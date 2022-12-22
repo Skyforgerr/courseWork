@@ -18,20 +18,22 @@
                 <a class="nav-link active" aria-current="page" href="main">Главная</a>
                 <a class="nav-link active" href="disk">Пластинки</a>
                 <a class="nav-link active" href="article">Статьи</a>
-                <a class="nav-link active" href="form">Форма</a>
                 <a class="nav-link active" href="about">О нас</a>
             </div>
         </div>
     </div>
 </nav>
+
+<a class="nav-link active" href="adddisk">Добавить новую пластинку</a>
+
 <main class="flex-shrink-0 mt-5">
     <div class="container">
         <h1 class="mt-5">Список пластинок</h1>
         <div th:each="el: ${disks}" class="alert alert-info mt-2">
             <h2 th:text="${el.name}"/>
-            <h3 th:text="${el.cost}"/>
-            <h3 th:text="${el.year}"/>
-            <h3 th:text="${el.lable}"/>
+            <h2 th:text="${el.cost}"/>
+            <h2 th:text="${el.year}"/>
+            <h2 th:text="${el.lable}"/>
             <h4 th:text="${el.description}"/>
         </div>
     </div>

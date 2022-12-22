@@ -18,14 +18,13 @@
                 <a class="nav-link active" aria-current="page" href="main">Главная</a>
                 <a class="nav-link active" href="disk">Пластинки</a>
                 <a class="nav-link active" href="article">Статьи</a>
-                <a class="nav-link active" href="form">Форма</a>
                 <a class="nav-link active" href="about">О нас</a>
             </div>
         </div>
     </div>
 </nav>
 <div class="container mt-5 mb-2" style="min-height: 70vh">
-    <h2>Добавленине книги</h2>
+    <h2>Добавленине статьи</h2>
     <form action="form" method="post">
         <input type="text" required
                name="name" placeholder="Введите название"
@@ -34,7 +33,7 @@
                   class="form-control"></textarea><br>
         <textarea name="text" required placeholder="Введите текст"
                   class="form-control"></textarea><br>
-        <button type="submit" class="btn btn-success">Добавить статью</button>
+        <button type="submit" class="btn btn-success"><a href="article">Добавить статью</a></button>
     </form>
 </div>
 </body>
