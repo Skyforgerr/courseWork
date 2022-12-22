@@ -4,6 +4,7 @@ import com.example.work.models.User;
 import com.example.work.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class PushController {
     @Autowired
     private UserRepository userRepository;
+
+    @GetMapping("/userlist")
+    public String userList(Model model){
+        Iterable<User> users = userRepository.findAll();
+        model.addAttribute("users", users);
+        return "userlist";
+
+    }
 
     @GetMapping("/user")
     public String user(){

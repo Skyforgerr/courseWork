@@ -22,21 +22,24 @@
                 <a class="nav-link active" href="form">Добавить новую статью</a>
                 <a class="nav-link active" href="about">О нас</a>
                 <a class="nav-link active" href="user">Заказать</a>
+                <a class="nav-link active" href="userlist">Список заказавших</a>
             </div>
         </div>
     </div>
 </nav>
 <div class="container mt-5 mb-2" style="min-height: 70vh">
     <h2>Добавленине статьи</h2>
-    <form action="form" method="post">
+    <form action="user" method="post">
         <input type="text" required
-               name="name" placeholder="Введите название"
+               name="name" placeholder="Введите имя"
                class="form-control" autocomplete="off"><br>
-        <textarea name="description" required placeholder="Введите опиcание"
+        <textarea name="surname" required placeholder="Введите фамилию"
                   class="form-control"></textarea><br>
-        <textarea name="text" required placeholder="Введите текст"
+        <textarea name="number" required placeholder="Введите номер"
                   class="form-control"></textarea><br>
-        <button type="submit" class="btn btn-success"><a href="main">Добавить статью</a></button>
+        <textarea name="plate" required placeholder="Введите желаемую пластинку"
+                  class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-success">Заказать</button>
     </form>
 </div>
 </body>
