@@ -35,6 +35,7 @@ public class ArticleController {
     public String newArticle(@RequestParam String name, @RequestParam String description, @RequestParam String text){
         Article article = new Article(name, description, text);
         articleRepository.save(article);
+        System.out.println("Saved a vinyl");
         return "redirect:/article";
     }
 }

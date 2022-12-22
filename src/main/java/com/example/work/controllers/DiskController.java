@@ -33,6 +33,7 @@ public class DiskController {
     public String newDisk(@RequestParam String name, @RequestParam int cost, @RequestParam String year, @RequestParam String lable, @RequestParam String description){
         Disk disk = new Disk(name, cost, year, lable, description);
         diskRepository.save(disk);
+
         return "redirect:/article";
     }
 }
